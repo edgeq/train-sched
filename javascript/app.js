@@ -23,15 +23,15 @@ console.log("linked up");
   	var dbTrainFreq = childsnap.val().trainFreq;
 
   	// console.log(dbDest);
-
+  	//create variable for new table rows and table data. 
   	var newRow = $("<tr>");
   	var newTrain = $("<td>").text(dbTrain);
   	var newDest = $("<td>").text(dbDest);
   	var new1TrainTime = $("<td>").text(db1TrainTime);
   	var dbTrainFreq = $("<td>").text(dbTrainFreq);
-
+  	//append new data from db to new rows. 
   	newRow.append(newTrain, newDest, dbTrainFreq /*new1TrainTime, */);
-
+  	//most recent at the top. don't make 'em scroll!
   	$("table").prepend(newRow);
 
   })
