@@ -14,4 +14,10 @@ console.log("linked up");
 
   var database = firebase.database();
 
+  database.ref().on('child_added', function(childsnap){
+  	console.log(childsnap.val().name)
+
+
+  })
+
 })  
